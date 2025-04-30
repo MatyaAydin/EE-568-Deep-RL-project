@@ -1,4 +1,4 @@
-# 🤖 -EE-568-Deep-RL-Project
+# 🤖 EE-568-Deep-RL-Project
 
 📚 Course project for **Reinforcement Learning** taught by *Volkan Cevher* at EPFL.
 
@@ -12,7 +12,7 @@
 
 ---
 
-### 👥 Team Members
+### 👥 Members of the team Random_hyperparameters_generator
 - 👤 Adam Mesbahi  
 - 👤 Aziz Sebbar  
 - 👤 Hassen Aissa  
