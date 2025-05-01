@@ -13,12 +13,12 @@
 ---
 
 ### 👥 Members of the team Random_hyperparameters_generator
-- 👤 Adam Mesbahi  
-- 👤 Aziz Sebbar  
-- 👤 Hassen Aissa  
-- 👤 Matya Aydin  
-- 👤 Mehdi Zoghlami  
-- 👤 Yassine Turki  
+- Adam Mesbahi  
+- Aziz Sebbar  
+- Hassen Aissa  
+- Matya Aydin  
+- Mehdi Zoghlami  
+- Yassine Turki  
 
 ---
 
