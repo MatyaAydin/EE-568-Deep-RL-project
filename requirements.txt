@@ -1,6 +1,8 @@
 torch
-gym
+gymnasium
 numpy
 seaborn
 matplotlib
 base
+stable-baselines3
+optuna
