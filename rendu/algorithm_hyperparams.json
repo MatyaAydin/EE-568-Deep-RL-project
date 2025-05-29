@@ -19,7 +19,7 @@
     }
   },
   "dqn": {
-    "learning_rate": ["float", 0.0002, 0.002],
+    "learning_rate": ["float", 0.0001, 0.001],
     "batch_size": ["categorical", [64, 128, 256]],
     "buffer_size": ["categorical", [10000, 50000, 100000]],
     "learning_starts": ["categorical", [0, 500, 1000, 2000]],
