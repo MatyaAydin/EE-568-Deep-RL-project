@@ -113,33 +113,6 @@ class MultiSeedEvalCallback(BaseCallback):
 
 
 
-# def evaluate_model(model, env, n_episodes=10):
-#     """
-#     Evaluate a RL model
-#     :param model: (BaseAlgorithm) the RL agent
-#     :param env: (gym.Env) the gym environment
-#     :param n_episodes: (int) number of episodes to evaluate
-#     :return: (float) mean reward
-#     """
-#     rewards = []
-#     for i in range(3):
-#         obs = env.reset()
-#         env.seed(i)
-#         episode_rewards = []
-
-#         for j in range(n_episodes):
-#             obs = env.reset()
-#             done = False
-#             episode_reward = 0
-#             while not done:
-#                 action, _ = model.predict(obs, deterministic=True)
-#                 obs, reward, terminated, truncated = env.step(action)
-#                 done = terminated or truncated
-#                 episode_reward += reward
-#             episode_rewards.append(episode_reward)
-#         rewards.append(np.mean(episode_rewards))
-#     return np.mean(rewards)
-
 def evaluate_model(model, vec_env, n_episodes=10):
     """
     Evaluate a RL model on a DummyVecEnv over multiple seeds.
