@@ -17,5 +17,24 @@
         [400, 300]
       ]
     }
+  },
+  "dqn": {
+    "learning_rate": ["float", 0.0001, 0.001],
+    "batch_size": ["categorical", [64, 128, 256]],
+    "buffer_size": ["categorical", [10000, 50000, 100000]],
+    "learning_starts": ["categorical", [0, 500, 1000, 2000]],
+    "gamma": ["float", 0.97, 0.995],
+    "target_update_interval": ["categorical", [100, 250, 500]],
+    "train_freq": ["categorical", [1, 4, 8, 16]],
+    "gradient_steps": ["categorical", [-1, 1, 4, 8]],
+    "exploration_fraction": ["float", 0.05, 0.25],
+    "exploration_final_eps": ["float", 0.05, 0.15],
+    "policy_kwargs": {
+      "net_arch": [
+        [128, 128],
+        [256, 256],
+        [512, 256]
+      ]
+    }
   }
 }
