@@ -24,7 +24,8 @@ ENV_NAMES = {
     'pendulum': 'Pendulum-v1',
     'mountaincar': 'MountainCarContinuous-v0',
     'cartpole': 'CartPole-v1',
-    'acrobot': 'Acrobot-v1'
+    'acrobot': 'Acrobot-v1',
+    'discrete_mountaincar': 'MountainCar-v0'
 }
 
 algorithms = {
@@ -183,9 +184,6 @@ def objective(trial):
                                    if k not in ["noise_type", "noise_std"]}
         hyperparams = hyperparams_without_noise
         hyperparams["action_noise"] = action_noise
-    else:
-        hyperparams["action_noise"] = None
-        action_noise = None
 
     print(f"Environment: {env_name}")
     model = algorithm_class(
@@ -214,8 +212,10 @@ def objective(trial):
         folders = [folder for folder in folders if os.path.isdir(os.path.join(
             f"./logs/{algorithm}_{env_name}/trial_{trial.number}/", folder))]
         folders = sorted(folders)
-        final_folder = folders[-1]
+        final_folder = f"./logs/{algorithm}_{env_name}/trial_{trial.number}/{folders[-1]}"
         with open(f"{final_folder}/hyperparams.json", "w") as f:
+            if "action_noise" in hyperparams:
+                hyperparams["action_noise"] = str(hyperparams["action_noise"])
             json.dump({
                 'params': hyperparams,
                 'trial_number': trial.number
@@ -252,7 +252,7 @@ def optimize_hyperparams(algorithm, env_name, n_trials=50):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Hyperparameter optimization for RL algorithms')
-    parser.add_argument('--env', type=str, choices=['pendulum', 'mountaincar', 'cartpole', 'acrobot'], 
+    parser.add_argument('--env', type=str, choices=['pendulum', 'mountaincar', 'cartpole', 'acrobot', 'discrete_mountaincar'],
                        default='pendulum', help='Environment to optimize for')
     parser.add_argument('--algorithm', type=str, choices=['td3', 'sac', 'ppo', 'dqn'], 
                        default='td3', help='RL algorithm to optimize')
