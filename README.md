@@ -48,8 +48,7 @@ tensorboard --logdir logs
 To visualize the model on the environment, use:
 
 ```bash
-python
-test_model.py --algorithm <ALGORITHM> --env <ENVIRONMENT> --model_path <MODEL_PATH>
+python test_model.py --algorithm <ALGORITHM> --env <ENVIRONMENT> --model_path <MODEL_PATH>
 ```
 
 ### 👥 Members of the team Random_hyperparameters_generator
