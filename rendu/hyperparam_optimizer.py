@@ -30,7 +30,8 @@ ENV_NAMES = {
 
 algorithms = {
     'td3': TD3,
-    'sac': SAC,
+    'sac-pendulum': SAC,
+    'sac-mountaincar': SAC,
     'ppo': PPO,
     'dqn': DQN    
 }
