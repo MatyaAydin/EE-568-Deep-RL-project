@@ -1,5 +1,6 @@
 import abc
 from collections import deque, namedtuple
+import random
 
 class ReplayBuffer:
     """Experience replay buffer"""

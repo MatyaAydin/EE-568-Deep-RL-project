@@ -1,0 +1,1 @@
+{'learning_rate': 0.000826917816406134, 'batch_size': 128, 'buffer_size': 10000000, 'learning_starts': 1000, 'train_freq': 1, 'gradient_steps': 7, 'gamma': 0.9819490449687415, 'tau': 0.010093815997082409, 'net_arch': [256, 256], 'noise_type': 'normal', 'noise_std': 0.4909612653800597}

@@ -1,0 +1,1 @@
+{'learning_rate': 8.130443988834333e-05, 'batch_size': 128, 'buffer_size': 1000, 'learning_starts': 100, 'train_freq': 12, 'gradient_steps': 2, 'net_arch': [64, 64], 'ent_coef': 0.1, 'tau': 0.013928812523000308}
