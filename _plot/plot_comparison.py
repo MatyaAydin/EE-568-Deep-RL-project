@@ -1,5 +1,5 @@
 """
-Script to make the plots comparing the models on each environment.
+Plot to make the plot comparing the models on each environment.
 """
 
 import matplotlib.pyplot as plt
@@ -9,9 +9,11 @@ import os
 sns.set_theme()
 
 
-# TODO put all envs
 ENV_NAME = {"pendulum": "Pendulum-v1",
-            "mountain_car_cont": "MountainCar-continuous-v0"
+            "mountain_car_cont": "MountainCar-continuous-v0",
+            "mountain_car": "MountainCar-v0",
+            "cartpole": "CartPole-v1",
+            "acrobot": "Acrobot-v1",
             }
 
 def plot_all_algo(folders):
@@ -35,9 +37,8 @@ def plot_all_algo(folders):
         ax[0, i].legend(loc='lower right')
 
     plt.tight_layout()
-    #plt.savefig("all_algo.pdf")
+    plt.savefig("all_algo.png")
     plt.show()
 
 
-# TODO put all envs
-plot_all_algo(["pendulum", "pendulum"])
+plot_all_algo(["pendulum", "mountain_car_cont", "cartpole", "acrobot"])
