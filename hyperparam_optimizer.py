@@ -30,10 +30,12 @@ ENV_NAMES = {
 
 algorithms = {
     'td3': TD3,
+    'ppo': PPO,
+    'dqn': DQN,
     'sac-pendulum': SAC,
     'sac-mountaincar': SAC,
-    'ppo': PPO,
-    'dqn': DQN    
+    'ppo-pendulum': PPO,
+    'ppo-acrobot': PPO
 }
 
 class MultiSeedEvalCallback(BaseCallback):
@@ -255,7 +257,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Hyperparameter optimization for RL algorithms')
     parser.add_argument('--env', type=str, choices=['pendulum', 'mountaincar', 'cartpole', 'acrobot', 'discrete_mountaincar'],
                        default='pendulum', help='Environment to optimize for')
-    parser.add_argument('--algorithm', type=str, choices=['td3', 'sac-pendulum', 'sac-mountaincar', 'ppo', 'dqn'], 
+    parser.add_argument('--algorithm', type=str, choices=['td3', 'sac-pendulum', 'sac-mountaincar', 'ppo-acrobot', 'ppo-pendulum', 'dqn'], 
                        default='td3', help='RL algorithm to optimize')
     parser.add_argument('--total_timesteps', type=int, default=5000,
                        help='Total timesteps for training the model')

@@ -17,6 +17,8 @@ algorithms = {
     'dqn': DQN,
     'sac-pendulum': SAC,
     'sac-mountaincar': SAC,
+    'ppo-pendulum': PPO,
+    'ppo-acrobot': PPO
 }
 
 def make_env(env_id, render_mode=None):
