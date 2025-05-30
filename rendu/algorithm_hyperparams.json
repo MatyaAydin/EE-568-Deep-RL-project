@@ -44,8 +44,8 @@
     "buffer_size": ["categorical", [1000, 10000, 100000, 1000000, 10000000]],
     "gamma": ["float", 0.99, 0.9999],
     "train_freq": ["categorical", [16, 32, 64]],
-    "gradient_steps": ["int", [1, 10]],
-    "ent_coef": ["float", [0.001, 10]],
+    "gradient_steps": ["int", 1, 10],
+    "ent_coef": ["float", 0.001, 10],
     "policy_kwargs": {
       "net_arch": [
         [64, 64],
@@ -64,7 +64,7 @@
     "train_freq": ["categorical", [16, 32, 64]],
     "gradient_steps": ["categorical", [16, 32, 64]],
     "ent_coef": ["categorical", ["auto", 0.01, 0.1, 0, 10, 100]],
-    "policy_kwargs":{"net_arch": [64, 64],
+    "policy_kwargs":{"net_arch": [[64, 64]],
                         "log_std_init":-3.67}
 
   }

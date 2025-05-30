@@ -13,9 +13,10 @@ ENVS = {
 
 algorithms = {
     'td3': TD3,
-    'sac': SAC,
     'ppo': PPO,
-    'dqn': DQN
+    'dqn': DQN,
+    'sac-pendulum': SAC,
+    'sac-mountaincar': SAC,
 }
 
 def make_env(env_id, render_mode=None):
