@@ -53,11 +53,11 @@ python test_model.py --algorithm <ALGORITHM> --env <ENVIRONMENT> --model_path <M
 
 ### 👥 Members of the team Random_hyperparameters_generator
 
-- Adam Mesbahi
-- Aziz Sebbar
-- Hassen Aissa
-- Matya Aydin
-- Mehdi Zoghlami
-- Yassine Turki
+- Adam Mesbahi: PPO, report
+- Aziz Sebbar: Poster, report
+- Hassen Aissa: Optimization in optuna, TD3, report
+- Matya Aydin: Plots, SAC, report
+- Mehdi Zoghlami: Poster, report
+- Yassine Turki: DQN, report
 
 ---
